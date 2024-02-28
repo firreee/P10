@@ -1,1 +1,57 @@
-.
+def main():
+    thetext = '''
+       Python was conceived in the late 1980's by Netherlands programmer
+Guido Van Rossum and rolled out in 1991. Developing the language
+was a hobby project for Van Rossum to keep him occupied over
+Christmas, though he soon began implementing the language at
+his employer Centrum Wiskunde & Informatica (CWI). The name of
+the language was inspired by Monty Python's Flying Circus, and
+today users of this code often work in references to Monty Python.
+Python is one of the most popular programming languages in the
+world. As a scripting language that can automate a complex series
+of tasks, Python is used on the back end of many web applications,
+games, and digital and animated special effects. Sites like YouTube
+and Instagram are among some of the titans that rely on this
+language to support both front-end and back-end functionality.
+        '''
+    #1 Print the LENGTH of the text
+    print("Length of the text:", len(thetext))
+
+    #2 Remove beginning and trailing spaces
+    stripped_text = thetext.strip()
+
+    #3 Print the new Length of the text
+    print("Length of the text after stripping:", len(stripped_text))
+
+    #4 Print the Count of the number of ‘the’ found
+    count_the = stripped_text.lower().count("the")
+    print("Count of 'the':", count_the)
+
+    #5 Print results if ‘little’ was found or not
+    if "little" in stripped_text.lower():
+        print("'little' found in the text")
+    else:
+        print("'little' not found in the text")
+
+    #6 Print results if ‘titan’ was found or not 
+    if "titan" in stripped_text.lower():
+        print("'titan' found in the text")
+    else:
+        print("'titan' not found in the text")
+
+    #7 Print position number of ‘appl’
+    appl_position = stripped_text.find("appl")
+    if appl_position == -1:
+        print("'appl' not found in the text")
+    else:
+        print("Position of 'appl':", appl_position)
+
+    #8 Copy the string from thetext to thetext2
+    thetext2 = stripped_text
+    
+    #9 Using thetext2 replace 'Python' with 'PYTHON'
+    thetext2 = thetext2.replace("Python", "PYTHON")
+
+    #9 Print thetext2
+    print("thetext2:", thetext2)
+main()
